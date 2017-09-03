@@ -1,0 +1,11 @@
+version: '2'
+services:
+  neo4j:
+    build: ../neo4j-dockerfile 
+    image: tuxintheshell/neo4j:3.2.2
+    ports:
+     - "7474:7474"
+     - "7687:7687"   
+    volumes:
+     - $HOME/neo4j/data:/data
+     - $HOME/neo4j/plugins:/plugins 
